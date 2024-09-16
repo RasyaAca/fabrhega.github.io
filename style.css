@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background: no-repeat url(rm222-mind-16.jpg);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    background-color: #0779e6;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    height: 50px;
+    align-items: center;
+}
+nav .logo{
+    font-family: 'Pacifico', Cursive;
+    letter-spacing: 3px;
+}
+nav{
+    color: #c3ebfe;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: all .3s;
+    color: #c3ebfe;
+}
+nav ul li a:hover{
+    text-shadow: 0 0 3px #2ecff2;
+}
+/* Hamburger menu */
+.menu-toggle{
+    display: none;height: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative
+}
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -5px;
+    top: -4px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #c3ebfe;
+    border-radius: 3px;
+    transition: all 1s;
+}
+/* Hamburger Animasi */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: rgb(243, 42, 42);
+    transform: rotate(45deg) translate(-1px, -1px);
+
+}
+/* Responsive */
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: rgb(243, 42, 42);
+    transform: rotate(-45deg) translate(-1px, 0);
+
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: translateX(-500px);
+}
+.content{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;;
+    padding: 10px;
+}
+.content img{
+    z-index: -99999999999999999;
+}
+.title{
+    color: #0779e6;
+}
+.content h3{
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-family: 'Nerko One', cursive;
+}
+.about{
+    width: 100%;
+    margin: 20px auto;
+    padding: 50px;
+}
+.about p:nth-child(3){
+    color: #0779e6;
+}
+.about p{
+    margin-top: 10px;
+}
+.garisbawah{
+    border: 3px solid #0779e6;
+    width: 20%;
+}
+.about h4{
+    margin-top: 20px; 
+    font-size: 23px;
+}
+.about h1{
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.porto{
+    width: 30%;
+    height: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.pic-main span{
+    display: inline-block;
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    margin: 100px auto;
+    background-color: red;
+}
+.pic-main{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 50%;
+    border: 1px solid black;
+}
+.pic-main img{
+    position: absolute;
+    width: 100px;
+    z-index: -1;
+    top: 20px;
+}
+.pic-main img:nth-child(2){
+    transform: translateX(-70px) rotate(-30deg) translateY(35px);
+}
+.pic-main img:nth-child(3){
+    transform: translateX(70px)rotate(30deg) translateY(35px);;
+}
+.line{
+    width: 100%;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+.content-2{
+    width: 80%;
+    margin: 5px auto;
+    padding: 20px;
+}
+.content-2 img{
+    width: 100%;
+}
+.desc1{
+    width: 100%;
+}
+.desc1 p{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.album{
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 15px;
+    padding: 10px;
+}
+.item{
+    box-shadow: 0 5px 5px black;
+}
+.item img{
+    height: 100%;
+}
+.more{
+    position: relative;
+}
+.kotak{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kotak h2{
+    color: white;
+}
+.link{
+    margin: 10px;
+    padding:10px;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: #3333339a;
+}
+.content-2 p:nth-child(2){
+}
+.box{
+    width: 80%;
+    margin: 50px auto;
+    border: 10px solid rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.576);
+}
+.box div{
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .item-1{
+    background: url(project/Screenshot\ \(579\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item-4{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.box .item-2{
+    background: url(project/Screenshot\ \(580\).png);
+    background-size: cover;
+}
+.box .item-3{
+    background: url(project/Screenshot\ \(15\).png);
+    background-size: cover;
+}
+.box a{
+    color: #333;
+    display: block;
+    text-align: center; 
+    padding: 20px;
+    background-color: #33333300;
+    transition: all .5s;
+}
+.box a:hover{
+    color: blue;
+    background-color: #3333339a;
+}
+.desc{
+    width: 70%;
+    margin: 20px auto;
+    text-transform: capitalize;
+    padding: 10px;
+    background-color: #2ecef267;
+    border-radius: 20px;
+    text-align: center;
+}
+.desc p{
+    font-family: "Titillium Web", sans-serif;
+}
+.h3-1{
+    margin-left:  140px;
+}
+.h3-2{
+    margin-left:  140px;
+}
+.h3-3{
+    margin-left:  140px;
+}
+h3{
+    font-size: 50px;
+}
+.gallery{
+    width: 80%;
+    margin: 5px auto;
+    border: 10px solid rgba(255, 255, 255, 0.363);
+    box-shadow: 2px 2px 2px black;
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.gallery img{
+    display: block;
+    width: 100%;
+}
+.footer{
+    width: 100%;
+    padding: 20px;
+    background-color: #137bc07a;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    place-content: center;
+    gap: 20px;
+}
+.sosmed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sosmed a{
+    order: 1;
+    color: white;
+    margin-right: 10px;
+}
+.sosmed img{
+    order: 2;
+}
+/* Responsive */
+
+
+/* For Pad */
+@media screen and(max-width: 768px) {
+    nav ul{
+        width: 50%;
+    }
+}
+/* For mobile */
+@media screen and (max-width: 576px) {
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #0779e6;
+        z-index: 1111;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 1s .2s;
+    }
+    .desc{
+        width: 90%;
+    }
+    .porto{
+        width: 60%;
+    }
+    .content img{
+        transform: translateX(-50px) scale(0.9);
+    }
+    .content{
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+    .h3-1{
+    margin-left:  30px;
+    }
+    .h3-2{
+    margin-left:  30px;
+    }
+    .h3-3{
+    margin-left:  30px;
+    }
+    .menu-toggle{
+        display: flex;
+        z-index: 11111;
+    }
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .box{
+        grid-template-columns: 1fr ;
+    }
+    .content-2{
+        width: 100%;
+    }
+    .content-2 p:nth-child(2){
+        margin-top: 0px;
+    }
+    .album{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-content: center;
+    }
+    .item{
+        padding: 0px;
+    border: 1px solid black;
+    }
+    .garisbawah{
+        width:100%;
+    }
+    .about{
+        text-align: center;
+    }
+}
